@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground transition-colors">
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-6 py-4">
@@ -18,10 +19,13 @@ const Index = () => {
                 Квартиндер
               </h1>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Особенности</a>
-              <a href="#download" className="text-gray-600 hover:text-primary transition-colors">Скачать</a>
-              <a href="#faq" className="text-gray-600 hover:text-primary transition-colors">FAQ</a>
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex space-x-8">
+                <a href="#features" className="text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Особенности</a>
+                <a href="#download" className="text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Скачать</a>
+                <a href="#faq" className="text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">FAQ</a>
+              </div>
+              <ThemeToggle />
             </div>
           </nav>
         </div>
